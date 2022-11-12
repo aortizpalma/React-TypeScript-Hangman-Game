@@ -68,10 +68,11 @@ function App() {
     margin: "0 auto",
     alignItems: "center"
   }}>
-    <h1>Hi! Guess the word before it's too late! <span style={{color: "white"}}> {wordToGuess}</span> </h1>
+    <h1>React TypeScript Hangman Game</h1>
+    <h2>Hi! Guess the word before it's too late! <span style={{color: "white"}}> {wordToGuess}</span> </h2>
     <div style={{ fontSize: "2rem", textAlign: "center"}}>
-      {isWinner && "Winner! - Refresh to try again"}
-      {isLoser && "Nice try - Refresh to try again"}
+      {isWinner && 'Winner! - Refresh or press "Enter" to try again'}
+      {isLoser && 'Nice try - Refresh or press "Enter" to try again'}
     </div>
     <HangmanDrawing numberOfGuesses={incorrectLetters.length}/>
     <HangmanWord reveal={isLoser} guessedLetters={guessedLetters} wordToGuess={wordToGuess} />
